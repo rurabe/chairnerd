@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.description = "A wrapper for the Seatgeek API"
   s.authors     = ["Ryan Urabe"]
   s.email       = 'rurabe@gmail.com'
-  s.files       = ["lib/chairnerd.rb"]
+  s.files       = `git ls-files`.split("\n")
   s.homepage    = 'http://github.com/rurabe/chairnerd'
   s.license     = 'MIT'
 end
