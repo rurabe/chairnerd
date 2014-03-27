@@ -1,4 +1,4 @@
-require 'lib/chairnerd/version'
+require_relative 'lib/chairnerd/version'
 Gem::Specification.new do |s|
   s.name        = 'chairnerd'
   s.version     = Chairnerd::VERSION
