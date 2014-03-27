@@ -2,16 +2,14 @@ module Chairnerd
   module Response
     class EventResponse < Base
 
+      simple_parse :id, :url, :title
+
       def datetime_local
-        DateTime.parse(@response['datetime_local'])
+        Time.parse(@response['datetime_local'])
       end
 
-      def url
-        @response['url']
-      end
-
-      def title
-        @response['title']
+      def datetime_utc
+        Time.parse(@response['datetime_utc'])
       end
 
     end

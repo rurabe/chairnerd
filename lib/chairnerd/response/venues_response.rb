@@ -1,8 +1,8 @@
 module Chairnerd
   module Response
-    class EventsResponse < CollectionResponse
+    class VenuesResponse < CollectionResponse
 
-      def events
+      def venues
         @collection
       end
     end
