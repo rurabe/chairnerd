@@ -26,6 +26,7 @@ module Chairnerd
             case v
             when nil then nil
             when Hash then build_sub_param(k,v)
+            when Time then build_query(k => v.iso8601)
             else "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}"
             end
           end.compact.join("&")
