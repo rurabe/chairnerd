@@ -2,7 +2,6 @@ module Chairnerd
   module Response
     class CollectionResponse < Base
       def initialize(request,response)
-        p response[plural_resource].nil?
         @collection = response[plural_resource].map {|ins| instance_response_class.new(request,ins) }
         super(request,response)
       end

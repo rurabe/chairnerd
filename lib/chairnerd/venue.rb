@@ -7,7 +7,7 @@ module Chairnerd
       end
 
       def find_by_id(venue_id)
-        request = Chairnerd::Client.make_request(:events,event_id)
+        request = Chairnerd::Client.make_request(:venues,venue_id)
         Response::VenueResponse.new(*request)
       end
     end

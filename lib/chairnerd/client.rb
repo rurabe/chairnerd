@@ -24,12 +24,11 @@ module Chairnerd
         def build_query(params={})
           params.map do |k,v|
             case v
-            when Hash
-              build_sub_param(k,v)
-            else
-              "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}"
+            when nil then nil
+            when Hash then build_sub_param(k,v)
+            else "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}"
             end
-          end.join("&")
+          end.compact.join("&")
         end
 
         def build_sub_param(namespace,param={})
